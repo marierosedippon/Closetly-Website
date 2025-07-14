@@ -1,0 +1,41 @@
+.closet-container {
+  position: relative;
+  width: 300px;
+  height: 600px;
+}
+
+.closet-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.left-door {
+  left: 0;
+  transform-origin: left center;
+}
+
+.right-door {
+  right: 0;
+  transform-origin: right center;
+}
+
+.closet-container:hover .left-door {
+  transform: rotateY(-100deg);
+}
+
+.closet-container:hover .right-door {
+  transform: rotateY(100deg);
+} 
